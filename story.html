@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- <meta http-equiv="refresh" content="1"> -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <script src="PICOCYOA.js"></script>
+    <script src="basicfunctions.js"></script>
+
+      <story-container id="mystory">
+        <story-title><h1>Example story title</h1></story-title>
+        <hr/>
+
+        <story-segment id="startSegment" show>
+
+          <segment-title>My section heading if necessary.</segment-title>
+          <segment-subtitle>Subtitle wont show in ToC</segment-subtitle>
+
+          <segment-content>
+            <p>This is my score: <script>scoreWriter();</script></p>
+          </segment-content>
+
+          <ul>
+            <segment-choice target="middleSegment"><li>middle segment</li></segment-choice>
+            <segment-choice target="badEnding"><li>leads to bad ending</li></segment-choice>
+            <segment-choice target="goodEnding"><li>leads to good ending</li></segment-choice>
+          </ul>
+
+        </story-segment>
+
+        <story-segment id="middleSegment">
+          <segment-title>middle Segment</segment-title>
+          <segment-subtitle>No way out</segment-subtitle>
+          <segment-content>
+            <p>You can mixin with existing html elements create and use javascript</p>
+            <form action="">
+              <input type="button" value="Click me a few times" onclick="scoreAdder(3);"/>
+            </form>
+          </segment-content>
+
+          <ul>
+            <segment-choice target="badEnding"><li>leads to bad ending</li></segment-choice>
+            <segment-choice target="goodEnding"><li>leads to good ending</li></segment-choice>
+            <segment-choice target="excellentEnding" condition="{() => currentScore >= 10 }"><li>leads to best ending</li></segment-choice>
+          </ul>
+        </story-segment>
+
+        <story-segment id="badEnding">
+          <segment-title>Bad ending</segment-title>
+          <segment-subtitle>No way out</segment-subtitle>
+          <segment-content>
+            <p>Rip GG</p>
+          </segment-content>
+        </story-segment>
+
+        <story-segment id="goodEnding">
+          <segment-title>Good ending</segment-title>
+          <segment-subtitle>you did your best</segment-subtitle>
+          <segment-content>
+            <p>nice work</p>
+          </segment-content>
+        </story-segment>
+
+        <story-segment id="excellentEnding">
+          <segment-title>Excellent</segment-title>
+          <segment-subtitle>Best ending of all</segment-subtitle>
+          <segment-content>
+            <p>there is no way this could have gone better.</p>
+          </segment-content>
+        </story-segment>
+      </story-container>
+    <hr/>
+  </body>
+</html>
+

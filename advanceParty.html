@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- <meta http-equiv="refresh" content="1"> -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <script src="basicfunctions.js"></script>
+
+      <story-container id="Advance Party">
+        <story-title><h1>Advance Party</h1></story-title>
+        <hr/>
+
+        <story-segment id="startSegment" show>
+          <segment-content>
+            <p>The third of November was a clear evening. Fireworks jumped up across the sky over the city. From the safe position in the house, it was hard to see any of the bright colours directly. Instead the experience was reduced to that of staccato popping.</p>
+          </segment-content>
+          <ul>
+            <segment-choice target="lookForCat"><li>Check the pets are indoors.</li></segment-choice>
+            <segment-choice target="grabADrink"><li>Grab a drink.</li></segment-choice>
+          </ul>
+        </story-segment>
+
+
+        <story-segment id="grabADrink">
+          <segment-content>
+            <p>You pour yourself a whisky and watch the tv.</p>
+          </segment-content>
+        </story-segment>
+
+        <story-segment id="lookForCat">
+          <segment-content>
+            <p>Suddenly aware of your lingering concerns, you decide to look for your cat. After frantically searching the house your realise that she is not inside.</p>
+          </segment-content>
+
+          <ul>
+            <segment-choice target="grabADrink"><li>Grab a drink.</li></segment-choice>
+            <segment-choice target="searchShed"><li>Search the shed.</li></segment-choice>
+            <segment-choice target="searchTheRoad"><li>Search the front garden.</li></segment-choice>
+          </ul>
+
+        </story-segment>
+      </story-container>
+    <hr/>
+  </body>
+</html>
+
