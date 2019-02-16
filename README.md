@@ -5,7 +5,7 @@ Pico Choose Your Own Adnenture is a pico framework for creating interactive fict
 Features: 
 * Simple to write - use pure html elements
 * No compilation - all you need is a text editor
-* No bulky framework - requires a single js import
+* No bulky framework - only requires a SINGLE js import
 
 ## Tutorial
 
