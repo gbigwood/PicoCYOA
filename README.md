@@ -58,7 +58,7 @@ The included script `basicfunctions.js` provides a library of javascript functio
 
 The included `grapher.html` provides the ability to open a story and view the graph of connections between the story segments. This can be usuful to visualise the potential paths in the story. Further the graph shows when you have declared a segment but forgotten to write it!
 
-[Example graph](examplegraph.png)
+![Example graph](examplegraph.png)
 
 ## Documentation
 
