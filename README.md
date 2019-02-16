@@ -1,6 +1,6 @@
 # PicoCYOA
 
-Pico Choose Your Own Adnenture is a pico framework for creating interactive fiction written in pure html and Javascript.
+Pico Choose Your Own Adventure is a pico framework for creating interactive fiction written in pure html and Javascript.
 
 Features: 
 * Simple to write - use pure html elements
