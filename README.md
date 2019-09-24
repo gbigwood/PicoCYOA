@@ -12,6 +12,7 @@ Features:
 Below is the simplest possible story with two possible paths: 
 
 ```html                               
+  <head> <link rel="stylesheet" href="styles.css"> </head>
   <body>
     <script src="PICOCYOA.js"></script>
       <story-container id="mystory">
