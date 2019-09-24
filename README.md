@@ -42,11 +42,15 @@ Stories are defined using custom html elements placed inside the html body tag. 
 
 A full version of the example that will work in browser is included in the repo: [Simplest Story](SimplestStory.html). 
 
-Also included is the example file [Full Story](Full Story.html) contains a working example including all features.
+Also included is the example file [Full Story](Full Story.html) contains a working example of all features including: _conditional rendering_.
 
 ### Conditional rendering
 
-PicoCYOA affords conditional section rendering of segment choices via utilising pure JavaScript. Using the `condition` property you can show paths only if certain conditions are met, e.g. if the reader has explored certain paths. You can add any JavaScript you wish.
+PicoCYOA affords conditional section rendering of segment choices via utilising pure JavaScript. Using the `condition` property you can show paths only if certain conditions are met, e.g. if the reader has explored certain paths. 
+
+While you can utilize any JavaScript you wish, the repo includes a library for basic functions. The included script `basicfunctions.js` provides a library of Javascript functions for managing state like scores. Please not that the use of this library is *not required* for choice based navigation.
+
+The following example demonstrates how to easily track a score using the provided `scoreAdder` function:
 
 ```html
 <story-segment id="middleSegment">                                      
@@ -66,7 +70,6 @@ PicoCYOA affords conditional section rendering of segment choices via utilising 
           </ul>                                                                 
 </story-segment>                                                        
 ```
-The included script `basicfunctions.js` provides a library of Javascript functions for managing state like scores. Please not that the use of this library is not required for basic choice based navigation.
 
 ### Tools for Managing the Story Writing
 
