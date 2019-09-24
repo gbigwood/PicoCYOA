@@ -1,5 +1,5 @@
 const initialScore = 0;
-let currentScore = 2;
+let currentScore = 0;
 
 // Basic functions
 const scoreAdder = (x) => { 
