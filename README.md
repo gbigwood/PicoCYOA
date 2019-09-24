@@ -42,7 +42,7 @@ Stories are defined using custom html elements placed inside the html body tag. 
 
 A full version of the example that will work in browser is included in the repo: [Simplest Story](SimplestStory.html). 
 
-Also included is the example file [Full Story](Full Story.html) contains a working example of all features including: _conditional rendering_.
+Also included is the example file [Full Story](FullStory.html) contains a working example of all features including: _conditional rendering_.
 
 ### Conditional rendering
 
