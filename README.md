@@ -38,7 +38,11 @@ Below is the simplest possible story with two possible paths:
 
 Stories are defined using custom html elements placed inside the html body tag. Each segment has a unique `id` and story sections are chained together using the `segment-choice` elements.
 
-A full version of SimplestStory.html that will work in brower is included in the repo: [Simplest Story](SimplestStory.html). Also included is the example file [Full Story](Full Story.html) contains a working example including all features.
+### Example Stories
+
+A full version of the example that will work in browser is included in the repo: [Simplest Story](SimplestStory.html). 
+
+Also included is the example file [Full Story](Full Story.html) contains a working example including all features.
 
 ### Conditional rendering
 
@@ -62,11 +66,11 @@ PicoCYOA affords conditional section rendering of segment choices via utilising 
           </ul>                                                                 
 </story-segment>                                                        
 ```
-The included script `basicfunctions.js` provides a library of Javascript functions for managing state like scores. 
+The included script `basicfunctions.js` provides a library of Javascript functions for managing state like scores. Please not that the use of this library is not required for basic choice based navigation.
 
-### Managing the story
+### Tools for Managing the Story Writing
 
-The included `grapher.html` provides the ability to open a story and view the graph of connections between the story segments. This can be useful to visualise the potential paths in the story. Further the graph shows when you have declared a segment but forgotten to write it! Here you can see the result of running on the example story `advanceParty.html` included in the repo:
+The included [Grapher](grapher.html) provides the ability to open a story and view the graph of connections between the story segments. This can be useful to visualise the potential paths in the story. Further the graph shows when you have declared a segment but forgotten to write it! Here you can see the result of running on the example story `advanceParty.html` included in the repo:
 
 ![Example graph](examplegraph.png)
 
