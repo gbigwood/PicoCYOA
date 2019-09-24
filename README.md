@@ -9,21 +9,22 @@ Features:
 
 ## Highlights
 
-Stories are defined using custom html elements placed inside the html body tag. Here is the simplest possible story with two possible paths:
+Below is the simplest possible story with two possible paths: 
 
-_See SimplestStory.html. Further the included file story.html contains a working example including all features_
 ```html                               
   <body>
     <script src="PICOCYOA.js"></script>
       <story-container id="mystory">
         <story-title><h1>Simplest possible story</h1></story-title> <hr/>
+
         <story-segment id="startSegment" show>
-          <segment-content> <p>Choose from options below to progress story</p> </segment-content>
+          <segment-content> <p>Choose from options below to progress story:</p> </segment-content>
           <ul>
             <segment-choice target="badEnding"><li>leads to bad ending</li></segment-choice>
             <segment-choice target="goodEnding"><li>leads to good ending</li></segment-choice>
           </ul>
         </story-segment>
+
         <story-segment id="badEnding">
           <segment-content> <p>Rip GG</p> </segment-content>
         </story-segment>
@@ -34,7 +35,11 @@ _See SimplestStory.html. Further the included file story.html contains a working
       </story-container>
   </body>
 ```
-Each segment has a unique `id` and story sections are chained together using the `segment-choice` elements.
+
+Stories are defined using custom html elements placed inside the html body tag. Each segment has a unique `id` and story sections are chained together using the `segment-choice` elements.
+_A full version of SimplestStory.html that will work in brower is included in the repo:_ ![Simplest Story](SimpleStory.html)
+
+A fully Further the included file Story.html contains a working example including all features
 
 ### Conditional rendering
 
@@ -69,3 +74,7 @@ The included `grapher.html` provides the ability to open a story and view the gr
 ## Documentation
 
 _full element overview plz_
+
+* logging to help debugging
+* JS in conditions
+* better css (version without css?, or at least one that allows easier mixin.)
