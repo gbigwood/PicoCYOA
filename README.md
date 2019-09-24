@@ -38,13 +38,11 @@ Below is the simplest possible story with two possible paths:
 
 Stories are defined using custom html elements placed inside the html body tag. Each segment has a unique `id` and story sections are chained together using the `segment-choice` elements.
 
-A full version of SimplestStory.html that will work in brower is included in the repo: [Simplest Story](SimplestStory.html)
-
-A fully Further the included file [Story](Story.html) contains a working example including all features.
+A full version of SimplestStory.html that will work in brower is included in the repo: [Simplest Story](SimplestStory.html). Also included is the example file [Full Story](Full Story.html) contains a working example including all features.
 
 ### Conditional rendering
 
-PicoCYOA affords conditional section rendering of segment choices via utilising pure javascript. Using the `condition` property you can show paths only if certain conditions are met, e.g. if the reader has explored certain paths. You can add any javascript you wish.
+PicoCYOA affords conditional section rendering of segment choices via utilising pure JavaScript. Using the `condition` property you can show paths only if certain conditions are met, e.g. if the reader has explored certain paths. You can add any JavaScript you wish.
 
 ```html
 <story-segment id="middleSegment">                                      
@@ -64,7 +62,7 @@ PicoCYOA affords conditional section rendering of segment choices via utilising 
           </ul>                                                                 
 </story-segment>                                                        
 ```
-The included script `basicfunctions.js` provides a library of javascript functions for managing state like scores. 
+The included script `basicfunctions.js` provides a library of Javascript functions for managing state like scores. 
 
 ### Managing the story
 
