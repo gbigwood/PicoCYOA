@@ -84,7 +84,8 @@ The included [Grapher](grapher.html) provides the ability to open a story and vi
 2. Explore the story and get a feel for the features
 2. Make a copy of [Simplest Story](SimplestStory.html) within the repo, and rename to your story of choice
 2. Open your new file in your browser
-2. Start Editing your new file using your favourite editor. Use [Full Story](FullStory.html) as a feature reference
+2. Start Editing your new file using your favourite editor. Use [Full Story](FullStory.html) as a reference to discover how to use features
+3. Use the documentation below for detailed explanation of features
 
 ## Documentation
 
