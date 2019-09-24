@@ -7,27 +7,32 @@ Features:
 * No compilation - all you need is a text editor
 * No bulky framework - only requires a SINGLE js import
 
-## Tutorial
+## Highlights
 
+Stories are defined using custom html elements placed inside the html body tag. Here is the simplest possible story with two possible paths:
 
-Stories are defined using custom html elements. Here is an example story section with a title, some content and two possible paths:
-
-_Please see story.html for full a working example_
+_See SimplestStory.html. Further the included file story.html contains a working example including all features_
 ```html                               
-<story-segment id="startSegment" show>      
-	<segment-title>My section heading if necessary.</segment-title>          
-	<segment-subtitle>Subtitle wont show in ToC</segment-subtitle>        
-									
-	<segment-content>                                                     
-		<p>Content for the section goes here </p>            
-	</segment-content>                                                    
-									
-	<ul>                                                                  
-		<segment-choice target="badEnding"><li>leads to bad ending</li></segment-choice>
-		<segment-choice target="goodEnding"><li>leads to good ending</li></segment-choice>
-	</ul>                                                                 
-							
-</story-segment>                                             
+  <body>
+    <script src="PICOCYOA.js"></script>
+      <story-container id="mystory">
+        <story-title><h1>Simplest possible story</h1></story-title> <hr/>
+        <story-segment id="startSegment" show>
+          <segment-content> <p>Choose from options below to progress story</p> </segment-content>
+          <ul>
+            <segment-choice target="badEnding"><li>leads to bad ending</li></segment-choice>
+            <segment-choice target="goodEnding"><li>leads to good ending</li></segment-choice>
+          </ul>
+        </story-segment>
+        <story-segment id="badEnding">
+          <segment-content> <p>Rip GG</p> </segment-content>
+        </story-segment>
+
+        <story-segment id="goodEnding">
+          <segment-content> <p>nice work</p> </segment-content>
+        </story-segment>
+      </story-container>
+  </body>
 ```
 Each segment has a unique `id` and story sections are chained together using the `segment-choice` elements.
 
@@ -53,11 +58,11 @@ PicoCYOA affords conditional section rendering of segment choices via utilising 
           </ul>                                                                 
 </story-segment>                                                        
 ```
-The included script `basicfunctions.js` provides a library of javascript functions for managing state like scores.
+The included script `basicfunctions.js` provides a library of javascript functions for managing state like scores. 
 
 ### Managing the story
 
-The included `grapher.html` provides the ability to open a story and view the graph of connections between the story segments. This can be usuful to visualise the potential paths in the story. Further the graph shows when you have declared a segment but forgotten to write it! Here you can see the result of running on the example story `advanceParty.html` included in the repo:
+The included `grapher.html` provides the ability to open a story and view the graph of connections between the story segments. This can be useful to visualise the potential paths in the story. Further the graph shows when you have declared a segment but forgotten to write it! Here you can see the result of running on the example story `advanceParty.html` included in the repo:
 
 ![Example graph](examplegraph.png)
 
