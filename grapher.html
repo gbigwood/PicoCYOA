@@ -47,7 +47,7 @@ var simulation = d3.forceSimulation(nodes)
   .force("repelForce",repelForce)
   .on('tick', ticked);
 
-var colorScale = ['lightblue', 'orange'];
+var colorScale = ['lightblue', 'orange', 'green' ];
 
 function updateLinks() {
   var u = d3.select('.links')
@@ -123,6 +123,7 @@ function ticked() {
 }
 }
 
+
 var openFile = function(event) {
 	var input = event.target;
 	var reader = new FileReader();
@@ -133,14 +134,18 @@ var openFile = function(event) {
 		console.log(el.getElementsByTagName( 'story-segment' )); // Live NodeList of your anchor elements
 		console.log(el.getElementsByTagName( 'segment-choice' )); // Live NodeList of your anchor elements
 
-    //TODO find the `show` elements by name
-    //TODO directed arrows makes it easier to find the problem
 		const definedNames = Array.from(el.getElementsByTagName( 'story-segment' )).map( x => x.id );
 		const allTargets = Array.from(el.getElementsByTagName( 'segment-choice' )).map( x => x.attributes.target.value );
 
 		const nodeNames = [...new Set(definedNames.concat(allTargets))];
-    const nodes = nodeNames.map( (x) => { return { name: x, group: definedNames.indexOf(x)>-1 ? 0 : 1 }; });
+    		const nodes = nodeNames.map( (x) => { return { name: x, group: 
+					allTargets.indexOf(x) < 0 ? 2 :  definedNames.indexOf(x) < 0  ? 1 :  0  
+								}; 
+						    });
+		//TODO find the `show` elements by name, set to group 3
 
+		//TODO directed arrows makes it easier to find the problem
+		//TODO highlight links that go towards undefined nodes
 		const links = Array.from(el.getElementsByTagName( 'segment-choice' )).map( x => { 
 			return { source: nodeNames.indexOf(x.closest('story-segment').id),  
 				target: nodeNames.indexOf(x.attributes.target.value) }; });
@@ -149,6 +154,7 @@ var openFile = function(event) {
 		console.log(nodes);
 		console.log(links);
     doGraphStuff(nodes, links);
+    //TODO make a table with these missing ones.
 
 	};
 	reader.readAsText(input.files[0]);
