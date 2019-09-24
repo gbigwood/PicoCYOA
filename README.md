@@ -37,9 +37,10 @@ Below is the simplest possible story with two possible paths:
 ```
 
 Stories are defined using custom html elements placed inside the html body tag. Each segment has a unique `id` and story sections are chained together using the `segment-choice` elements.
-_A full version of SimplestStory.html that will work in brower is included in the repo:_ ![Simplest Story](SimpleStory.html)
 
-A fully Further the included file Story.html contains a working example including all features
+A full version of SimplestStory.html that will work in brower is included in the repo: [Simplest Story](SimplestStory.html)
+
+A fully Further the included file [Story](Story.html) contains a working example including all features.
 
 ### Conditional rendering
 
